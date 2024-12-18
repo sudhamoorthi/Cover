@@ -10,6 +10,7 @@ app.use(cors({
   allowedHeaders: ['Content-Type', 'Authorization'], // Specify allowed headers
 }));
 
+
 // Other middleware
 app.use(express.json());
 
@@ -19,7 +20,7 @@ app.post('/', (req, res) => {
   if (username === 'test' && password === 'test') {
     res.status(200).json({ message: 'Login ' + username + ' successful' });
   } else {
-    res.status(401).json({ message: 'Invalid username credentials' });
+    res.status(401).json({ message: 'Invalid' + username +' credentials' });
   }
 });
 
