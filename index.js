@@ -10,7 +10,7 @@ app.post('/', (req, res) => {
   const { username, password } = req.body;
 
   if (username === 'test' && password === 'test') {
-    res.status(200).json({ message: 'Login successful' });
+    res.status(200).json({ message: 'Login ' + username +  ' successful' });
   } else {
     res.status(401).json({ message: 'Invalid credentials' });
   }
